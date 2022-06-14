@@ -20,6 +20,18 @@ export const exists = async (fields = {}) => {
   }
 };
 
+export const getUserByEmail = async (email) => {
+  try {
+    return await database.Users.findOne({
+      where: { email
+      }, 
+      raw: true
+    })
+  } catch {
+    return false
+  }
+}
+
 export const insert = async (data) => {
   try {
     const user = new database.Users(data);

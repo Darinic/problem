@@ -1,3 +1,5 @@
+import React from "react"
+import {Link} from 'react-router-dom'
 
 export default (props) => {
     const date = new Date(props.profile.createdAt)
@@ -5,6 +7,7 @@ export default (props) => {
     return (
         <div className="col">
             <div className="card shadow-sm">
+                <Link to={'/profiles/' + props.profile.id}>
                 <img className="bd-placeholder-img card-img-top" 
                      src={props.profile.profile_image}
                      />
@@ -19,6 +22,7 @@ export default (props) => {
                     <small className="text-muted">{date.toLocaleDateString('lt-LT')}</small>
                 </div>
                 </div>
+                </Link>
             </div>
         </div>
     )

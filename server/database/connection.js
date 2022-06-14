@@ -27,7 +27,7 @@ try {
   database.Profile = profile(sequelize);
   database.Portfolio = portfolio(sequelize);
 
-  await sequelize.sync({ alter: true });
+  await sequelize.sync({ alter: false });
 } catch {
   console.log("Nepavyko prisijungti prie duomenų bazės");
 }

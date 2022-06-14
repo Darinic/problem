@@ -5,5 +5,6 @@
         "user": "root",
         "password": "",
         "db": "freelancer_directory"
-    }
+    },
+    "secret": "secret_phrase"
 }
